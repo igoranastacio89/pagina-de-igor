@@ -13,8 +13,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Igor Santos',
+      //theme: ThemeData.light(),
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
+        colorScheme: ColorScheme.light(),
         useMaterial3: true,
         textTheme: TextTheme(
           displayLarge: GoogleFonts.roboto(

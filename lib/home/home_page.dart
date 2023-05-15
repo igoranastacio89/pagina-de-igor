@@ -682,18 +682,21 @@ class MyProfilePage extends StatelessWidget {
         ),
         body: SingleChildScrollView(
           physics: AlwaysScrollableScrollPhysics(),
-          child: Container(
-            height: (MediaQuery.of(context).size.width > 600)
-                ? MediaQuery.of(context).size.height + 500
-                : MediaQuery.of(context).size.height + 1000,
-            child: LayoutBuilder(
-              builder: (context, constraints) {
-                if (constraints.maxWidth > 600) {
-                  return _buildWideLayout();
-                } else {
-                  return _buildNarrowLayout();
-                }
-              },
+          child: Padding(
+            padding: const EdgeInsets.only(top: 28.0),
+            child: Container(
+              height: (MediaQuery.of(context).size.width > 600)
+                  ? MediaQuery.of(context).size.height + 500
+                  : MediaQuery.of(context).size.height + 1000,
+              child: LayoutBuilder(
+                builder: (context, constraints) {
+                  if (constraints.maxWidth > 600) {
+                    return _buildWideLayout();
+                  } else {
+                    return _buildNarrowLayout();
+                  }
+                },
+              ),
             ),
           ),
         ),
@@ -716,7 +719,7 @@ class MyProfilePage extends StatelessWidget {
                 decoration: const BoxDecoration(
                   shape: BoxShape.circle,
                   image: DecorationImage(
-                    image: AssetImage('assets/images/igor.jpeg'),
+                    image: AssetImage('assets/images/igor_formal.png'),
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -1058,7 +1061,7 @@ class MyProfilePage extends StatelessWidget {
           decoration: const BoxDecoration(
             shape: BoxShape.circle,
             image: DecorationImage(
-              image: AssetImage('assets/images/igor.jpeg'),
+              image: AssetImage('assets/images/igor_formal.png'),
               fit: BoxFit.cover,
             ),
           ),
