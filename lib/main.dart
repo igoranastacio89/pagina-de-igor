@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:page_igor/home/home_page.dart';
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'Igor Santos',
       //theme: ThemeData.light(),
       theme: ThemeData(
-        colorScheme: ColorScheme.light(),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.cyan),
         useMaterial3: true,
         textTheme: TextTheme(
           displayLarge: GoogleFonts.roboto(
